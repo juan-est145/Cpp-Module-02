@@ -20,6 +20,7 @@ public:
 	void setRawBits(int const raw);
 	float toFloat(void) const;
 	int toInt(void) const;
+	bool operator>(const Fixed &element) const;
 	~Fixed(void);
 };
 std::ostream &operator<<(std::ostream &out, const Fixed &element);
