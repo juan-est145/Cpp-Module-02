@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 23:53:54 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/06 00:12:08 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,24 +142,24 @@ Fixed Fixed::operator--(int)
 	return (tmp);
 }
 
-int &Fixed::min(Fixed &first, Fixed &second)
+Fixed &Fixed::min(Fixed &first, Fixed &second)
 {
-	return (first._fixedNumber <= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+	return (first < second ? first : second);
 }
 
-const int &Fixed::min(const Fixed &first, const Fixed &second)
+const Fixed &Fixed::min(const Fixed &first, const Fixed &second)
 {
-	return (first._fixedNumber <= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+	return (first < second ? first : second);
 }
 
-int &Fixed::max(Fixed &first, Fixed &second)
+Fixed &Fixed::max(Fixed &first, Fixed &second)
 {
-	return (first._fixedNumber >= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+	return (first > second ? first : second);
 }
 
-const int &Fixed::max(const Fixed &first, const Fixed &second)
+const Fixed &Fixed::max(const Fixed &first, const Fixed &second)
 {
-	return (first._fixedNumber >= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+	return (first > second ? first : second);
 }
 
 Fixed::~Fixed(void)
