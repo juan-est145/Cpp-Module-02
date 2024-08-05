@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 16:56:21 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 17:00:54 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ int Fixed::toInt(void) const
 bool Fixed::operator>(const Fixed &element) const
 {
 	return (this->_fixedNumber > element._fixedNumber);
+}
+
+bool Fixed::operator<(const Fixed &element) const
+{
+	return (this->_fixedNumber < element._fixedNumber);
 }
 
 Fixed::~Fixed(void)
