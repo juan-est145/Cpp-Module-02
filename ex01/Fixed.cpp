@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 11:17:18 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 11:22:57 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Fixed::Fixed(const float initialValue)
 	this->_fixedNumber = roundf(initialValue * (1 << Fixed::_fractionNum));
 }
 
-Fixed& Fixed::operator=(const Fixed &toCopy)
+Fixed &Fixed::operator=(const Fixed &toCopy)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &toCopy)
@@ -45,7 +45,7 @@ Fixed& Fixed::operator=(const Fixed &toCopy)
 	return (*this);
 }
 
-int Fixed::getRawBits(void) const 
+int Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_fixedNumber);
@@ -56,15 +56,13 @@ void Fixed::setRawBits(int const raw)
 	this->_fixedNumber = raw;
 }
 
-float Fixed::toFloat(void) const 
+float Fixed::toFloat(void) const
 {
-	std::cout << "toFloat member function called" << std::endl;
 	return ((float)this->_fixedNumber / (1 << Fixed::_fractionNum));
 }
 
 int Fixed::toInt(void) const
 {
-	std::cout << "toInt member function called" << std::endl;
 	return (this->_fixedNumber >> Fixed::_fractionNum);
 }
 
@@ -73,7 +71,7 @@ Fixed::~Fixed(void)
 	std::cout << "Destructor called" << std::endl;
 }
 
-std::ostream &operator<<(std::ostream &out, Fixed &element)
+std::ostream &operator<<(std::ostream &out, const Fixed &element)
 {
 	out << element.toFloat();
 	return (out);
