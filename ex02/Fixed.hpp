@@ -29,6 +29,7 @@ public:
 	Fixed operator+(const Fixed &element) const;
 	Fixed operator-(const Fixed &element) const;
 	Fixed operator*(const Fixed &element) const;
+	Fixed operator/(const Fixed &element) const;
 	~Fixed(void);
 };
 std::ostream &operator<<(std::ostream &out, const Fixed &element);
