@@ -21,5 +21,7 @@ public:
 	float toFloat(void) const;
 	int toInt(void) const;
 	~Fixed(void);
+	
 };
+std::ostream &operator<<(std::ostream &out, Fixed &element);
 #endif

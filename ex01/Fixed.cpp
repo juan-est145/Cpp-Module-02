@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 10:52:37 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 11:17:18 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,10 @@ int Fixed::toInt(void) const
 Fixed::~Fixed(void)
 {
 	std::cout << "Destructor called" << std::endl;
+}
+
+std::ostream &operator<<(std::ostream &out, Fixed &element)
+{
+	out << element.toFloat();
+	return (out);
 }
