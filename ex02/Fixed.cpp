@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 20:47:21 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 20:54:58 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,11 @@ bool Fixed::operator!=(const Fixed &element) const
 Fixed Fixed::operator+(const Fixed &element) const
 {
 	return (Fixed(this->toFloat() + element.toFloat()));
+}
+
+Fixed Fixed::operator-(const Fixed &element) const
+{
+	return (Fixed(this->toFloat() - element.toFloat()));
 }
 
 Fixed::~Fixed(void)
