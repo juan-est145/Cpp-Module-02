@@ -2,6 +2,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed
 {
@@ -12,6 +13,8 @@ private:
 public:
 	Fixed(void);
 	Fixed(const Fixed &toCopy);
+	Fixed(const int initialValue);
+	Fixed(const float initialValue);
 	Fixed &operator=(const Fixed &toCopy);
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );

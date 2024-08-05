@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/04 18:12:30 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 09:52:30 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@ Fixed::Fixed()
 Fixed::Fixed(const Fixed &toCopy) : _fixedNumber(toCopy._fixedNumber)
 {
 	std::cout << "Copy constructor called" << std::endl;
+}
+
+Fixed::Fixed(const int initialValue)
+{
+	std::cout << "Int constructor called" << std::endl;
+	this->_fixedNumber = initialValue << Fixed::_fractionNum;
+}
+
+Fixed::Fixed(const float initialValue)
+{
+	std::cout << "Float constructor called" << std::endl;
+	this->_fixedNumber = roundf(initialValue * (1 << Fixed::_fractionNum));
 }
 
 Fixed& Fixed::operator=(const Fixed &toCopy)
