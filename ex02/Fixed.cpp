@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 21:19:42 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 23:26:34 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,12 @@ Fixed Fixed::operator*(const Fixed &element) const
 Fixed Fixed::operator/(const Fixed &element) const
 {
 	return (Fixed(this->toFloat() / element.toFloat()));
+}
+
+Fixed Fixed::operator++(void)
+{
+	this->_fixedNumber++;
+	return (*this);
 }
 
 Fixed::~Fixed(void)
