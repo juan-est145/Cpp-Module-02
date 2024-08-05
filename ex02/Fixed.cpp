@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 23:50:12 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 23:53:54 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,6 +150,16 @@ int &Fixed::min(Fixed &first, Fixed &second)
 const int &Fixed::min(const Fixed &first, const Fixed &second)
 {
 	return (first._fixedNumber <= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+}
+
+int &Fixed::max(Fixed &first, Fixed &second)
+{
+	return (first._fixedNumber >= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
+}
+
+const int &Fixed::max(const Fixed &first, const Fixed &second)
+{
+	return (first._fixedNumber >= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
 }
 
 Fixed::~Fixed(void)
