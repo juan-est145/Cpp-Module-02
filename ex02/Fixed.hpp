@@ -34,6 +34,7 @@ public:
 	Fixed operator++(int);
 	Fixed &operator--(void);
 	Fixed operator--(int);
+	static int &min(Fixed &first, Fixed &second);
 	~Fixed(void);
 };
 std::ostream &operator<<(std::ostream &out, const Fixed &element);

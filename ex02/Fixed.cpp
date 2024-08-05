@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 23:40:00 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 23:46:06 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,6 +140,11 @@ Fixed Fixed::operator--(int)
 	Fixed tmp(*this);
 	operator--();
 	return (tmp);
+}
+
+int &Fixed::min(Fixed &first, Fixed &second)
+{
+	return (first._fixedNumber <= second._fixedNumber ? first._fixedNumber: second._fixedNumber);
 }
 
 Fixed::~Fixed(void)
