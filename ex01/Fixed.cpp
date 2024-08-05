@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/04 17:31:39 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/05 09:52:30 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/05 10:52:37 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,18 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
 	this->_fixedNumber = raw;
+}
+
+float Fixed::toFloat(void) const 
+{
+	std::cout << "toFloat member function called" << std::endl;
+	return ((float)this->_fixedNumber / (1 << Fixed::_fractionNum));
+}
+
+int Fixed::toInt(void) const
+{
+	std::cout << "toInt member function called" << std::endl;
+	return (this->_fixedNumber >> Fixed::_fractionNum);
 }
 
 Fixed::~Fixed(void)
