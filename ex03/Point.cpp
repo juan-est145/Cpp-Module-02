@@ -6,7 +6,12 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 12:53:03 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/06 12:53:04 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/06 13:06:17 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Point.hpp"
+
+Point::Point(void) : _x(0), _y(0) {}
+
+Point::Point(const float num1, const float num2) : _x(num1), _y(num2) {}
