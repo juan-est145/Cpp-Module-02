@@ -6,7 +6,7 @@
 /*   By: juestrel <juestrel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 12:53:03 by juestrel          #+#    #+#             */
-/*   Updated: 2024/08/06 13:25:36 by juestrel         ###   ########.fr       */
+/*   Updated: 2024/08/06 13:46:11 by juestrel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,13 @@ Point &Point::operator=(const Point &toCopy)
 }
 
 Point::~Point(void) {}
+
+Fixed Point::getX(void) const
+{
+	return (this->_x);
+}
+
+Fixed Point::getY(void) const
+{
+	return (this->_y);
+}
