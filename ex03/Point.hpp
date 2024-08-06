@@ -1,12 +1,19 @@
 #ifndef POINT_HPP
 #define POINT_HPP
 
+#include "Fixed.hpp"
+
 class Point
 {
 private:
-	/* data */
+	const Fixed _x;
+	const Fixed _y;
+	
 public:
 	Point(void);
+	Point(const float num1, const float num2);
+	Point(const Point &toCopy);
+	Point &operator=(const Point &toCopy);
 	~Point();
 };
 #endif
